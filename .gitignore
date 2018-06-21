@@ -1,10 +1,15 @@
-# installed NodeJS modules, which are often very large.
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+target/
 node_modules/
-
-# byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# because macOS is macOS.
-.DS_Store
