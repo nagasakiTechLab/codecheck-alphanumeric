@@ -1,0 +1,133 @@
+{
+  "decode": [
+    {
+      "title": "ゼロ値の1桁ローマ字'A'を解読できる\n     Can decode the zero value alphabetical number 'A'",
+      "input": ["decode", "A"],
+      "output": 0
+    },
+    {
+      "title": "ゼロ値以外の1桁ローマ字を解読できる\n     Can decode a non-zero single letter",
+      "input": ["decode", "B"],
+      "output": 1
+    },
+    {
+      "title": "ゼロ値の2桁ローマ字'AA'を解読できる\n     Can decode the two letter zero value alphabetical numbers 'AA'",
+      "input": ["decode", "AA"],
+      "output": 0
+    },
+    {
+      "title": "2桁ローマ字'BA'を繰り下げて1桁の数字に解読できる\n     Can decode the two letter 'BA' by carrying down into a single decimal number.",
+      "input": ["decode", "BA"],
+      "output": 9
+    },
+    {
+      "title": "2桁ローマ字を2桁の数字に解読できる\n     Can decode two letters into a two digit decimal number",
+      "input": ["decode", "IG"],
+      "output": 78
+    },
+    {
+      "title": "3桁ローマ字を3桁の数字に解読できる\n     Can decode three letters into a three digit decimal number",
+      "input": ["decode", "DDD"],
+      "output": 273
+    },
+    {
+      "title": "9桁ローマ字を9桁の数字に解読できる\n     Can decode nine letters into a nine digit decimal number",
+      "input": ["decode", "GHIABCDEF"],
+      "output": 296020940
+    },
+    {
+      "title": "157桁の数字'DHCCHDDEBF...'をエンコードできる\n     Can encode 157 digit alphabetical number 'DHCCHDDEBF...'",
+      "input": ["decode", "DHCCHDDEBFIDIDGCFEGDHDCGAFDDGDHBIAGADFBADFHFIBFFCGCAHEIAIIFDHDHGFDCGHIGEDIBEDEHADICBBHEHBCBEGBIEHAFDBDBFDHCIBEDBGEFFGACGACBFDAEAFCCHIGAHBIDIHCEBEBIBFCDEIIHAI"],
+      "output": 276910033818923479812737657823469876718641987649781361463764954098802518764628237467231873628347582973485972834752784935773114658736582736458972634785
+    }
+  ],
+  "encode": [
+    {
+      "title": "ゼロ値の1桁数字'0'をエンコードできる\n     Can encode zero value decimal value '0'",
+      "input": ["encode", "0"],
+      "output": "A"
+    },
+    {
+      "title": "ゼロ値以外の1桁数字がエンコードできる\n     Can encode a non-zero single digit decimal",
+      "input": ["encode", "2"],
+      "output": "C"
+    },
+    {
+      "title": "1桁数字'9'を2桁ローマ字にエンコードできる\n     Can encode single digit decimal value '9' into two letter alphabetical number",
+      "input": ["encode", "9"],
+      "output": "BA"
+    },
+    {
+      "title": "2桁の数字'34'を2桁ローマ字にエンコードできる\n     Can encode two digit decimal value '34' into two letter alphabetical number",
+      "input": ["encode", "34"],
+      "output": "DH"
+    },
+    {
+      "title": "3桁の数字'123'を3桁ローマ字にエンコードできる\n     Can encode three digit decimal value '123' into three letter alphabetical number",
+      "input": ["encode", "123"],
+      "output": "BEG"
+    },
+    {
+      "title": "3桁の数字'777'を繰り上げて4桁のローマ字にエンコードできる\n     Can encode three digit decimal value '777' by carrying up into a four letter alphabetical number",
+      "input": ["encode", "777"],
+      "output": "BAFD"
+    },
+    {
+      "title": "5桁の数字を5桁のローマ字にエンコードできる\n     Can encode five digit decimal value into five letter alphabetical number",
+      "input": ["encode", "32768"],
+      "output": "EIIEI"
+    },
+    {
+      "title": "8桁の数字を8桁のローマ字にエンコードできる\n     Can encode eight digit decimal value into eight letter alphabetical number",
+      "input": ["encode", "32774139"],
+      "output": "GHGACGAA"
+    },
+    {
+      "title": "150桁のローマ字'2769100338...'を解読できる\n     Can encode 150 digit decimal value '2769100338...' into alphabetical numbers",
+      "input": ["encode", "276910033818923479812737657823469876718641987649781361463764954098802518764628237467231873628347582973485972834752784935773114658736582736458972634785"],
+      "output": "DHCCHDDEBFIDIDGCFEGDHDCGAFDDGDHBIAGADFBADFHFIBFFCGCAHEIAIIFDHDHGFDCGHIGEDIBEDEHADICBBHEHBCBEGBIEHAFDBDBFDHCIBEDBGEFFGACGACBFDAEAFCCHIGAHBIDIHCEBEBIBFCDEIIHAI"
+    }
+  ],
+  "align": [
+    {
+      "title": "入力値がゼロ値の1桁ローマ字'A'の場合の数式を出力できる\n     Can output equation when input is zero value alphabetical number 'A'",
+      "input": ["align", "A"],
+      "output": "A + H = H"
+    },
+    {
+      "title": "入力値がゼロ以外の1桁ローマ字の場合の数式を出力できる\n     Can output equation when input is a non-zero single letter",
+      "input": ["align", "B"],
+      "output": "B + G = H"
+    },
+    {
+      "title": "入力値が加算が不要な1桁ローマ字'H'の場合の数式を出力できる\n     Can output equation when input is a single letter 'H' which requires no addition",
+      "input": ["align", "H"],
+      "output": "H + A = H"
+    },
+    {
+      "title": "入力値が1桁ローマ字'I'、和が繰り上げて2桁の場合の数式を出力できる\n     Can output equation when input is a single letter 'I' which carries up to a two letter sum",
+      "input": ["align", "I"],
+      "output": "I + GI = HH"
+    },
+    {
+      "title": "入力値が2桁ローマ字、和が2桁の場合の数式を出力できる\n     Can output equation when input is two letters with a two letter sum",
+      "input": ["align", "BA"],
+      "output": "BA + GH = HH"
+    },
+    {
+      "title": "入力値が2桁ローマ字'IG'、和が繰り上げて3桁の場合の数式を出力できる\n     Can output equation when input is two letters 'IG', which carries up to a three letter sum",
+      "input": ["align", "IG"],
+      "output": "IG + GIB = HHH"
+    },
+    {
+      "title": "入力値が3桁ローマ字、和が3桁の場合の数式を出力できる\n     Can output equation when input is three letters with a three letter sum",
+      "input": ["align", "DDD"],
+      "output": "DDD + EEE = HHH"
+    },
+    {
+      "title": "入力値が9桁ローマ字、和が9桁の場合の数式を出力できる\n     Can output equation when input is nine letters with a nine letter sum",
+      "input": ["align", "GHIABCDEF"],
+      "output": "GHIABCDEF + IIHGFEDC = HHHHHHHHH"
+    }
+  ]
+}
